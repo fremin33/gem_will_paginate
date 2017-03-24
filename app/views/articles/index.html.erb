@@ -1,0 +1,12 @@
+<ul>
+   <% @articles.each do |article| %>
+     <li><%= article.title  %></li>
+   <% end %>
+</ul>
+
+<div class="apple_pagination">
+    <div class="page_info">
+      <%= page_entries_info @articles %>
+    </div>
+    <%= will_paginate @articles, :container => false %>
+  </div>
